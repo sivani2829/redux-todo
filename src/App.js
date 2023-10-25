@@ -6,8 +6,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import store from "./store";
 
+let days=['sun','mon','tues','wed','thurs','friday','sat']
+
 function App() {
   const [titleName, setTitleName] = useState("");
+  const [day,setDay]=useState('')
   // const[idn,setIdn]=useState(1);
   let dispatch = useDispatch();
 
@@ -19,11 +22,14 @@ function App() {
       setTitleName(" ");
     }
   };
+  
+
   return (
     <div className="container mt-5 w-50">
       <h2 className="text-primary text-center">
         Todo Application Using React Redux
       </h2>
+      
       <div className="input-group">
         <input
           type="text"
